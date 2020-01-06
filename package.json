@@ -1,5 +1,5 @@
 {
-    "name": "ghost-starter-theme",
+    "name": "panda",
     "description": "A custom theme for ghost",
     "demo": "https://starter.ghost.io",
     "version": "1.0.0",
@@ -14,6 +14,7 @@
     "scripts": {
         "dev": "gulp",
         "zip": "gulp zip",
+        "docker-watch": "docker-compose up -d && gulp",
         "test": "gscan .",
         "test:ci": "gscan --fatal --verbose .",
         "pretest": "gulp build",
@@ -21,15 +22,16 @@
         "ship": "STATUS=$(git status --porcelain); echo $STATUS; if [ -z \"$STATUS\" ]; then yarn version && git push --follow-tags; fi"
     },
     "author": {
-        "name": "Ghost Foundation",
-        "email": "hello@ghost.org",
-        "url": "https://ghost.org"
+        "name": "Aadam",
+        "email": "aadimator@gmail.com",
+        "url": "https://aadimator.com"
     },
     "gpm": {
         "type": "theme",
         "categories": [
             "Minimal",
-            "Magazine"
+            "Blog",
+            "Personal"
         ]
     },
     "keywords": [
@@ -39,22 +41,22 @@
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/TryGhost/Starter.git"
+        "url": "https://github.com/aadimator/panda.git"
     },
-    "bugs": "https://github.com/TryGhost/Starter/issues",
-    "contributors": "https://github.com/TryGhost/Starter/graphs/contributors",
+    "bugs": "https://github.com/aadimator/panda/issues",
+    "contributors": "https://github.com/aadimator/panda/graphs/contributors",
     "devDependencies": {
         "autoprefixer": "9.7.3",
         "cssnano": "4.1.10",
-        "gscan": "^2.7.0",
+        "gscan": "^3.2.1",
         "gulp": "4.0.2",
-        "gulp-livereload": "4.0.1",
+        "gulp-livereload": "4.0.2",
         "gulp-postcss": "8.0.0",
         "gulp-sourcemaps": "2.6.5",
         "gulp-uglify": "3.0.2",
         "gulp-util": "3.0.8",
         "gulp-watch": "5.0.1",
-        "gulp-zip": "5.0.0",
+        "gulp-zip": "5.0.1",
         "postcss-color-function": "4.1.0",
         "postcss-custom-properties": "9.0.2",
         "postcss-easy-import": "3.0.0"
