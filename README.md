@@ -1,6 +1,13 @@
-# Ghost Starter Theme
+# London
 
-A starter framework for Ghost themes! Fork this repository and start your development here with all the main things you need to develop a custom Ghost theme.
+A custom, image-centric theme for [Ghost](http://github.com/tryghost/ghost/). Made for publishers and portfolios with plenty of graphics to show off to the world. Completely free and fully responsive, released under the MIT license.
+
+**Demo: https://london.ghost.io**
+
+&nbsp;
+
+![london](https://user-images.githubusercontent.com/120485/50552024-84837400-0c82-11e9-8f1d-cf25962c7e62.jpg)
+
 
 &nbsp;
 
@@ -28,13 +35,10 @@ One neat trick is that you can also create custom one-off templates just by addi
 
 # Development
 
-Styles are compiled using Gulp/PostCSS to polyfill future CSS spec. You'll need [Node](https://nodejs.org/), [Yarn](https://yarnpkg.com/) and [Gulp](https://gulpjs.com) installed globally. After that, from the theme's root directory:
+London styles are compiled using Gulp/PostCSS to polyfill future CSS spec. You'll need [Node](https://nodejs.org/), [Yarn](https://yarnpkg.com/) and [Gulp](https://gulpjs.com) installed globally. After that, from the theme's root directory:
 
 ```bash
-# Install
-yarn
-
-# Run build & watch for changes
+$ yarn install
 $ yarn dev
 ```
 
@@ -43,7 +47,7 @@ Now you can edit `/assets/css/` files, which will be compiled to `/assets/built/
 The `zip` Gulp task packages the theme files into `dist/<theme-name>.zip`, which you can then upload to your site.
 
 ```bash
-yarn zip
+$ yarn zip
 ```
 
 # PostCSS Features Used
@@ -55,4 +59,4 @@ yarn zip
 
 # Copyright & License
 
-Copyright (c) 2013-2019 Ghost Foundation - Released under the [MIT license](LICENSE).
+Copyright (c) 2013-2020 Ghost Foundation - Released under the [MIT license](LICENSE).

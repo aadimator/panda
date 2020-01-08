@@ -1,23 +1,35 @@
 {{!< default}}
 
 {{#post}}
-<article class="gh-article {{post_class}}">
+<article class="post-content {{post_class}} {{#unless feature_image}}no-image{{/unless}}">
 
-    <header class="gh-header gh-canvas">
-        <h1 class="gh-title">{{title}}</h1>
-
-        {{#if custom_excerpt}}
-            <p class="gh-excerpt">{{custom_excerpt}}</p>
-        {{/if}}
-
-        {{#if feature_image}}
-            <img class="gh-feature-image" src="{{feature_image}}" alt="{{title}}" />
-        {{/if}}
+    <header class="post-content-header">
+        <h1 class="post-content-title">{{title}}</h1>
     </header>
 
-    <div class="gh-content gh-canvas">
+    {{#if feature_image}}
+    <div class="post-content-image">
+        <img class="kg-image" src="{{feature_image}}" alt="{{title}}" />
+    </div>
+    {{/if}}
+
+    <div class="post-content-body">
         {{content}}
     </div>
 
 </article>
 {{/post}}
+
+{{!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs --}}
+{{#contentFor "scripts"}}
+<script>
+    var images = document.querySelectorAll('.kg-gallery-image img');
+    images.forEach(function (image) {
+        var container = image.closest('.kg-gallery-image');
+        var width = image.attributes.width.value;
+        var height = image.attributes.height.value;
+        var ratio = width / height;
+        container.style.flex = ratio + ' 1 0%';
+    })
+</script>
+{{/contentFor}}
