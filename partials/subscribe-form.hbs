@@ -1,0 +1,40 @@
+{{!-- <section class="subscribe-form">
+    <h3 class="subscribe-form-title">Subscribe to {{@site.title}}</h3>
+    <p class="subscribe-form-description">Get the latest posts delivered right to your inbox</p>
+    <form data-members-form="subscribe">
+        <div class="form-group">
+            <input class="subscribe-email" data-members-email placeholder="youremail@example.com" autocomplete="false" />
+            <button class="button primary" type="submit">
+                <span class="button-content">Subscribe</span>
+                <span class="button-loader">{{> "icons/loader"}}</span>
+            </button>
+        </div>
+        <div class="message-success">
+            <strong>Great!</strong> Check your inbox and click the link to confirm your subscription.
+        </div>
+        <div class="message-error">
+            Please enter a valid email address!
+        </div>
+    </form>
+</section> --}}
+
+<section class="newsletter">
+    <div class="newsletter-container border-top">
+        <form class="newsletter-form embeddable-buttondown-form" data-members-form="subscribe">
+            <input id="bd-email" name="email" type="email" class="newsletter-input" data-members-email placeholder="Subscribe to the newsletter">
+            <label class="newsletter-label" for="bd-email">Email Address</label>
+            {{!-- <input type="submit" value="→" class="newsletter-btn"> --}}
+            <button class="newsletter-btn" type="submit">
+                <span class="button-content">→</span>
+                <span class="button-loader">
+                    {{!-- <div class="lds-ripple"><div></div><div></div></div> --}}
+                    <div class="lds-ellipsis"><div></div><div></div><div></div>
+                    {{!-- <div class="lds-circle"><div></div></div> --}}
+                </span>
+            </button>
+            <p data-members-error><!-- error message will appear here --></p>
+            <div class="message-success"><strong>Great!</strong> Check your inbox and click the link to complete signin</div>
+            <div class="message-error">Please enter a valid email address!</div>
+        </form>
+    </div>
+</section>

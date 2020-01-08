@@ -11,27 +11,55 @@ production stylesheet in assets/built/screen.css using: gulp dev
 /* Base components */
 @import "vars.css";
 @import "components/global.css";
-@import "components/forms.css";
-@import "components/buttons.css";
+/* @import "components/forms.css"; */
+/* @import "components/buttons.css"; */
+@import "components/ghost.css";
+@import "components/animations.css";
+@import "components/subscribe.css";
 
 /* Ghost components */
 @import "ghost/header.css";
 @import "ghost/content.css";
 @import "ghost/readmore.css";
-@import "ghost/members.css";
+/* @import "ghost/members.css"; */
 @import "ghost/errors.css";
 @import "ghost/footer.css";
+
+/* Page Specific Styles */
+@import "pages/newsletter.css";
+
 
 
 /* Main - Your styles here! Edit below
 /* ---------------------------------------------------------- */
+
+html:before {
+    content: "｡＾･ｪ･＾｡  ‏‏‎  ‏‏‎  ‏‏‎  ‏‏‎  ‏‏‎  ‏‏‎  Meow  ‏‏‎  ‏‏‎  ‏‏‎  ‏‏‎  ‏‏‎  ‏‏‎  ｡＾･ｪ･＾｡";
+    display: block;
+    text-align: center;
+    position: absolute;
+    top: -20px;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    font-size: 12px;
+    font-family: var(--font-sans-serif);
+    opacity: 0.4;
+}
+
+body {
+    font-family: 'Muli', sans-serif;
+    background: var(--color-bg);
+    transition: background 0.3s ease-out;
+    transition-delay: 0.25;
+}
 
 html,
 .gh-viewport {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background: #fff;
+    background: var(--color-bg);
 }
 
 .gh-main {
@@ -132,8 +160,13 @@ html,
 /* ---------------------------------------------------------- */
 
 .gh-page-head {
-    margin: 0 auto;
-    padding: 8vmin 0 4vmin;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10vw 0 10vw;
+    max-width: 740px;
+    margin: auto;
     text-align: center;
 }
 
@@ -141,17 +174,25 @@ html,
     margin: 4vmin 0 0 0;
 }
 
-.gh-page-head > p {
-    max-width: 720px;
-    margin: 0.3em auto 0;
-    padding: 0 6vmin;
-    font-size: 1.3em;
-    line-height: 1.4em;
-    opacity: 0.5;
+.gh-page-head-title {
+    margin: 0;
+    font-size: 4.2rem;
+    color: var(--color-base);
+}
+@media (max-width: 500px) {
+    .gh-page-head-title {
+        font-size: 2rem;
+    }
 }
 
-@media (max-width: 700px) {
-    .gh-page-head > p {
+.gh-page-head-description {
+    margin: 0 0 1.6vw;
+    color: color(var(--color-border) l(-20%));
+    font-size: 2.2rem;
+    line-height: 1.35em;
+}
+@media (max-width: 500px) {
+    .gh-page-head-description {
         font-size: 1.6rem;
     }
 }
