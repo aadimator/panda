@@ -1,0 +1,12 @@
+{{!< default}}
+
+<div class="gh-page">
+    <div class="gh-container">
+        
+        {{#get "posts" limit="1" include="tags,authors"}}
+            {{#foreach posts}}
+                {{> "post-content"}}
+            {{/foreach}}
+        {{/get}}
+    </div>
+</div>

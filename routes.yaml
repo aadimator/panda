@@ -1,0 +1,21 @@
+routes:
+  /: home
+  /signup/: members/signup
+  /signin/: members/signin
+  /account/: members/account
+
+collections:
+  /blog/:
+    permalink: /blog/{slug}/
+    template: blog
+    filter: primary_tag:blog
+    data: tag.blog
+  /newsletter/:
+    permalink: /newsletter/{slug}/
+    template: newsletter
+    filter: primary_tag:newsletter
+    data: tag.newsletter
+
+taxonomies:
+  tag: /tag/{slug}/
+  author: /author/{slug}/
