@@ -46,7 +46,7 @@
     "bugs": "https://github.com/aadimator/panda/issues",
     "contributors": "https://github.com/aadimator/panda/graphs/contributors",
     "devDependencies": {
-        "autoprefixer": "10.2.4",
+        "autoprefixer": "10.2.5",
         "cssnano": "4.1.10",
         "gscan": "3.6.1",
         "gulp": "4.0.2",
